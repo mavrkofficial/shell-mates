@@ -1,0 +1,50 @@
+{
+  "description": "Edit this file to define archetypes, palettes, and trait pools. Re-run npm run personas:8bit-gif to regenerate GIFs (or personas:8bit for static PNG only).",
+
+  "output": {
+    "logicalSize": 36,
+    "scale": 8,
+    "background": "#c4e8f2"
+  },
+
+  "archetypes": [
+    {
+      "id": "girl",
+      "label": "Girl lobster",
+      "bow": true,
+      "clawScaleRange": [0.85, 1.0],
+      "notes": "Bows: pink, purple, white, red — edit bowColors below"
+    },
+    {
+      "id": "boy",
+      "label": "Boy lobster",
+      "bow": false,
+      "clawScaleRange": [1.0, 1.45],
+      "notes": "Larger claw spread; edit clawScaleRange / body sizes in code if you add PNG layers later"
+    },
+    {
+      "id": "tiny",
+      "label": "Smol lobster",
+      "bow": false,
+      "clawScaleRange": [0.55, 0.75],
+      "bodyScale": 0.78,
+      "notes": "Smaller body silhouette"
+    },
+    {
+      "id": "chonk",
+      "label": "Chonk lobster",
+      "bow": true,
+      "clawScaleRange": [1.0, 1.15],
+      "bodyScale": 1.12,
+      "notes": "Big body, optional bow"
+    }
+  ],
+
+  "bowColors": ["#ff4fa3", "#c084fc", "#f8fafc", "#f87171"],
+  "bodyColors": ["#f97316", "#ea580c", "#fb923c", "#fdba74", "#fdbcb4", "#fecdd3"],
+  "shellColors": ["#dc2626", "#b91c1c", "#991b1b", "#7f1d1d", "#ef4444"],
+  "bellyColors": ["#fde68a", "#fcd34d", "#fff7ed", "#ffedd5"],
+  "eyeWhite": "#fefefe",
+  "eyePupil": "#0f172a",
+  "outline": "#1e1b4b"
+}

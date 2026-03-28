@@ -1,0 +1,72 @@
+# Dependencies
+node_modules
+
+# Secrets — NEVER commit
+.env
+.env.*
+!.env.example
+web/.env
+web/.env.*
+!web/.env.example
+
+# Hardhat build artifacts
+cache
+artifacts
+typechain-types
+
+# Internal checkpoints / progress logs
+data/profiles.json
+data/register-deployer-checkpoint.json
+data/register-deployer-progress.json
+data/reputation-write-checkpoint.json
+
+# Local testnet deploys (mainnet deploy is kept)
+deployed/ink-31337-lobster-registry.json
+
+# Generated persona output (large, regenerable)
+personas/out
+
+# Generated assets (hosted on Supabase, regenerable)
+web/public/lobsters/
+web/public/registrations/
+
+# Web build output
+web/dist
+web/tsconfig.tsbuildinfo
+
+# Reference repos
+_erc8004-ref/
+
+# Prediction market concept (scrapped)
+simulation/prediction-report.json
+simulation/predict-matches.mjs
+docs/PREDICTION-AND-MONEY.md
+
+# Early iterations / abandoned scripts
+scripts/test-feedback.ts
+scripts/register-test-agent.ts
+scripts/generate-lobster-wallets.ts
+scripts/fund-lobster-wallets.ts
+scripts/write-mirofish-reputation.ts
+scripts/bulk-mint-lobsters.ts
+scripts/lobster-peer-ratings.ts
+scripts/verify-lobster-registry.ts
+scripts/upload-to-supabase-storage.mjs
+scripts/ink-rpc.ts
+
+# Setup docs (not needed for showcase)
+docs/SETUP.md
+
+# Env templates (not a replicable project)
+.env.example
+web/.env.example
+
+# Abandoned hooks (replaced by static JSON)
+web/src/useReputation.ts
+
+# Unused art generator
+personas/generate-art-gemini.mjs
+
+# OS
+.DS_Store
+Thumbs.db

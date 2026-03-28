@@ -1,0 +1,53 @@
+{
+  "name": "lobster-tinder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ERC-8004 Lobster Tinder — Silly Hacks hackathon",
+  "type": "module",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy:lobster-registry": "npx hardhat run scripts/deploy-lobster-registry.ts --network ink",
+    "verify:lobster-registry": "npx hardhat run scripts/verify-lobster-registry.ts --network ink",
+    "wallets:generate": "npx hardhat run scripts/generate-lobster-wallets.ts",
+    "wallets:fund": "npx hardhat run scripts/fund-lobster-wallets.ts --network ink",
+    "mint:lobsters": "npx hardhat run scripts/bulk-mint-lobsters.ts --network ink",
+    "register:test-agent": "npx hardhat run scripts/register-test-agent.ts --network ink",
+    "register:deployer-batch": "npx hardhat run scripts/register-deployer-batch.ts --network ink",
+    "rate:lobsters": "npx hardhat run scripts/lobster-peer-ratings.ts --network ink",
+    "storage:upload-supabase": "node scripts/upload-to-supabase-storage.mjs",
+    "sim:dating": "node simulation/run-dating-sim.mjs",
+    "sim:parse": "node simulation/parse-mirofish-results.mjs",
+    "sim:predict-matches": "node simulation/predict-matches.mjs",
+    "reputation:upgrade": "npx hardhat run scripts/upgrade-reputation.ts --network ink",
+    "reputation:write": "npx hardhat run scripts/write-mirofish-reputation.ts --network ink",
+    "personas:generate": "node personas/generate-personas.mjs",
+    "personas:art": "node personas/generate-art-gemini.mjs",
+    "personas:build": "node personas/build-profiles-json.mjs",
+    "personas:8bit": "node personas/generate-8bit-pfps.mjs",
+    "personas:8bit-gif": "node personas/generate-8bit-gifs.mjs",
+    "pipeline": "node personas/generate-personas.mjs && node personas/generate-art-gemini.mjs && node personas/build-profiles-json.mjs",
+    "pipeline:8bit": "node personas/generate-personas.mjs && node personas/generate-8bit-gifs.mjs && node personas/build-profiles-json.mjs",
+    "pipeline:8bit-gif": "npm run pipeline:8bit",
+    "web:dev": "npm run dev --prefix web",
+    "web:build": "npm run build --prefix web",
+    "setup": "npm install && npm install --prefix web"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.0.1",
+    "@nomicfoundation/hardhat-toolbox-viem": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^3.0.6",
+    "@nomicfoundation/hardhat-viem": "^3.0.0",
+    "@types/node": "^22.18.8",
+    "hardhat": "^3.0.6",
+    "typescript": "~5.8.0",
+    "viem": "^2.45.1"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@openzeppelin/contracts": "^5.4.0",
+    "@openzeppelin/contracts-upgradeable": "^5.4.0",
+    "dotenv": "^17.2.3",
+    "gifenc": "^1.0.3",
+    "sharp": "^0.33.5"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "chainId": 57073,
+  "network": "ink",
+  "deployer": "0x93B860a8898F057A2b476c10ead04A42FC87521D",
+  "identityProxy": "0x0c6576d0e73013ad549bd62d69c14982c5347032",
+  "identityImplementation": "0x9531898df8b8b0c66e0c0813199758f4a7770110",
+  "reputationProxy": "0xe0acd112606ad584015a86d493d11e5534ad5cd9",
+  "reputationImplementation": "0x0e8b2035755d1889c124255a51427d2719a8c04a",
+  "hotOrNotTag": "hotOrNot",
+  "note": "Use identityProxy for register/tokenURI. Use reputationProxy for giveFeedback. Tag attractiveness as tag1=hotOrNot, value 0-100, valueDecimals=0 per EIP-8004.",
+  "reputationImpl": "0x0094e800886db54238f83265d277ad6c078c708a",
+  "reputationUpgradedAt": "2026-03-27T20:49:08.929Z",
+  "reputationUpgradeTx": "0xe115d690338fe08a7536116509b3a8a55055bcc13667f48eccfeb9835b1147ab"
+}
