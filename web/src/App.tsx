@@ -64,6 +64,9 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+const SUPABASE_BASE =
+  "https://mqhlopealixmlpoqywdm.supabase.co/storage/v1/object/public/Lobster-Pics/SHELL/registrations";
+
 const FETCH_CONCURRENCY = 40;
 
 async function fetchAllRegistrations(count: number): Promise<Card[]> {
@@ -73,7 +76,7 @@ async function fetchAllRegistrations(count: number): Promise<Card[]> {
   async function next() {
     while (cursor < count) {
       const i = cursor++;
-      const r = await fetch(`/registrations/${i}.json`);
+      const r = await fetch(`${SUPABASE_BASE}/${i}.json`);
       if (!r.ok) continue;
       const reg = (await r.json()) as Registration;
       results[i] = { id: i, reg, categoryLines: [] };
