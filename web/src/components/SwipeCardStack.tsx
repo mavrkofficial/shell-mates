@@ -129,7 +129,7 @@ export function SwipeCardStack({ stackIds, cardsById, onSwipeComplete, onRewind,
           const depth = visible.length - 1 - i;
           const card = cardsById.get(id);
           if (!card) return null;
-          const isTop = depth === visible.length - 1;
+          const isTop = depth === 0;
 
           if (!isTop) {
             const s = 0.88 + depth * 0.06;
